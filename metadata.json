@@ -1,0 +1,6 @@
+{
+  "name": "Monochrome CLI Terminal",
+  "description": "A minimalist, responsive pixel CLI terminal with smooth black/white monochromatic theme transition.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

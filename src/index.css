@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: 'DotGothic16', 'VT323', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    letter-spacing: 0.02em;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+/* Global smooth transition for monochromatic inversion */
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition-property: background-color, color, border-color, fill, stroke, box-shadow, text-shadow;
+  transition-duration: 450ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Blinking cursor animation */
+@keyframes pixel-blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+.pixel-cursor {
+  animation: pixel-blink 0.85s steps(1) infinite;
+}
+
+/* Custom retro scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.theme-dark ::-webkit-scrollbar-track {
+  background: #000000;
+  border-left: 1px solid #333333;
+}
+
+.theme-dark ::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+
+.theme-light ::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-left: 1px solid #cccccc;
+}
+
+.theme-light ::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+
